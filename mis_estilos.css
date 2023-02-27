@@ -1,0 +1,13 @@
+body {
+    background-color: #404163;
+}
+hr {
+height:2px; max-width: 100%; border-width:0; color:gray; background-color:gray;
+margin-right: 1em;
+}
+div.dato {
+padding-top: 1rem;
+}
+div.caja{
+padding-bottom: 2rem; padding-left: 1rem;padding-right: 1rem;
+}
