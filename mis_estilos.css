@@ -11,3 +11,12 @@ padding-top: 1rem;
 div.caja{
 padding-bottom: 2rem; padding-left: 1rem;padding-right: 1rem;
 }
+@media only screen and (max-width: 600px) {
+    #col1 {
+        padding-right: 1em !important;
+        padding-left: 1rem !important;;
+    }
+    #hoja {
+        width: 90%;
+    }
+}
