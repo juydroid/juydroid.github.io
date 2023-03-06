@@ -6,13 +6,15 @@ function togle_dark_light(){
               switchStatus = $(this).is(':checked');
               document.documentElement.setAttribute('data-bs-theme','dark')
               document.getElementById("hoja").style.backgroundColor = "black";
-              document.getElementById("direcciones").style.backgroundColor = "#033C1A";
+              document.getElementById("direcciones").style.backgroundColor  = "#033C1A";
+              document.getElementById("direcciones2").style.backgroundColor = "#033C1A";
             }
             else {
               switchStatus = $(this).is(':checked');
               document.documentElement.setAttribute('data-bs-theme','light')
               document.getElementById("hoja").style.backgroundColor = "white";
-              document.getElementById("direcciones").style.backgroundColor = "#00f5dc";
+              document.getElementById("direcciones").style.backgroundColor  = "#00f5dc";
+              document.getElementById("direcciones2").style.backgroundColor = "#00f5dc";
             }
         });  
 }
@@ -28,6 +30,7 @@ function relleno_en_miModal(){
     modalBodyInput.value = recipient
     })
 }
+
 
 function obtener_datos_deJson() {
     /* obtiene datos de ramdon user de un arbol JSON*/
@@ -47,7 +50,13 @@ function obtener_datos_deJson() {
             document.getElementById("ciudad_y_estado").innerHTML=ciu+", "+stt;
             document.getElementById("pais").innerHTML=ctry;
             document.getElementById("celu").innerHTML=data.results[0].cell;
-            document.getElementById("foto").src = data.results[0].picture.large;           
+            document.getElementById("foto").src = data.results[0].picture.large;
+            /**texto en direcciones 2 */
+            document.getElementById("email2").innerHTML=data.results[0].email;
+            document.getElementById("calle_y_num2").innerHTML=calle+" "+num;
+            document.getElementById("ciudad_y_estado2").innerHTML=ciu+", "+stt;
+            document.getElementById("pais2").innerHTML=ctry;
+            document.getElementById("celu2").innerHTML=data.results[0].cell;
           }
       });
   }
